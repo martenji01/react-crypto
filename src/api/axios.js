@@ -3,6 +3,8 @@ import axios from 'axios';
 //change baseurl
 axios.defaults.baseURL = 'https://mongoose-auth-bitbucket.herokuapp.com/';
 //axios.defaults.baseURL = 'https://api.coingecko.com/api/v3';
+axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
+axios.defaults.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS, PUT, PATCH, DELETE';
 axios.defaults.headers['Content-Type'] = 'application/json';
 
 //cors
@@ -14,7 +16,7 @@ var corsOptions = {
 */
 
 
-axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
+
 //axios.defaults.headers["Accept"]="application/vnd.heroku+json; version=3";
 
 // axios.interceptors.request.use(async conf => {
